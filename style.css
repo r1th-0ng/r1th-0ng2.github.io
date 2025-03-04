@@ -1,0 +1,89 @@
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --gradient-start: #6366f1;
+            --gradient-end: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --surface: #ffffff;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --accent: #ec4899;
+            --text-dark: #1e293b;
+            --text-muted: #94a3b8;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.07);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--text-dark);
+        }
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background-color: var(--surface);
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            padding: 1.75rem;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+        .contact-section {
+            background-color: var(--surface);
+            padding: 4rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
